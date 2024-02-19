@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="sr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeMontablan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="x-icon" href="https://raw.githubusercontent.com/llnmmntbln/Activity/main/a%20(3).png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        :root {
+            --first-color: rgb(20 20 20);
+            --second-color: #1fb9b0;
+            --third-color: rgb(135 135 135);
+            --hover-color: #1fb9b0;
+            --body-bg-color: #e9e9e9;
+            --card-bg-color: #f00;
+            --bar-color: #d1d1d1;
+            --title-shadow-color: #000;
+            --education-section-color: rgb(177, 177, 177);
+            --bg-transparent-color: rgb(209 209 209 / 3%);
+            --transparent-color-01: rgba(0, 0, 0, 0.1);
+            --button-color: rgb(88, 88, 88);
+            --line-color: #1fb9b0;
+            --color-filter: invert(1);
+            --box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+            --small-font-size: 0.9em;
+            --normal-font-size: 1em;
+            --scroll-down-color: #fff;
+            --scroll-up-color: #fff;
+            --bg-clr-one: #f6f9fe;
+            --bg-clr-two: #f4f7fc;
+            --bg-clr-three: #eef1f6;
+            --primary-clr: #05555c;
+            --primary-light-clr: #eaf3fa;
+            --links-clr: #186f78;
+            --text-clr: #3f7277;
+            --secondary-heading: #277b6d;
+            --about-color: #f0f0f0;
+            --progress-bar: #878787;
+            --progress-title: #575757;
+            --resume-color: #05555c;
+            --resume-border: #1fb9b0;
+            --education-color: #575757;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        element.style {
+            border-right: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            color: var(--first-color);
+            background: var(--body-bg-color);
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 2rem 0 0 0;
+            transition: 3s ease;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--first-color);
+        }
+
+        li {
+            list-style: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: rgb(138, 136, 136);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(206, 206, 206);
+            border-radius: 2em;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1fb9b0;
+        }
+
+        header {
+            z-index: 1;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backdrop-filter: blur(20px);
+            transition: .6s ease;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 3px 2px #e3e3e3;
+        }
+
+        #preloader {
+            background: #eae8ea url(https://htmlburger.com/blog/wp-content/uploads/2021/07/The-Best-50-Website-Preloaders-Around-the-Web-Example-17a.gif) no-repeat center center;
+            background-size: auto;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+        }
+
+        .nav-bar img {
+            width: 65px;
+        }
+
+        .nav-bar {
+            position: relative;
+            height: calc(4rem + 1rem);
+            max-width: 1250px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+            transition: 1s ease;
+        }
+
+        .nav-bar .logo {
+            color: var(--first-color);
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .nav-items a {
+            color: var(--first-color);
+            font-size: var(--normal-font-size);
+            font-weight: 500;
+        }
+
+        .nav-items a:not(last-child) {
+            margin-right: 50px;
+        }
+
+        .nav-items a:hover {
+            color: var(--second-color);
+        }
+
+        .nav-menu-btn {
+            display: none;
+        }
+
+        .home {
+            position: relative;
+            max-width: 1250px;
+            min-height: 100vh;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 4rem 2rem;
+            flex-direction: column;
+        }
+
+        .home .home-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .home-container .info h2 {
+            font-size: 4em;
+            font-weight: 600;
+            line-height: 70px;
+        }
+
+        .home-container .info h3 {
+            color: var(--line-color);
+            font-size: 1.3em;
+            font-weight: 600;
+            line-height: 40px;
+        }
+
+        .home-container .info p {
+            color: var(--third-color);
+            font-size: var(--normal-font-size);
+            max-width: 350px;
+        }
+
+        .btn {
+            background: var(--button-color);
+            color: var(--scroll-down-color);
+            font-size: 1em;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 25px;
+            padding: 20px 30px;
+            letter-spacing: 1px;
+            border-radius: 10px;
+        }
+
+        .btn:hover {
+            background: var(--hover-color);
+        }
+
+        .home-container .home-img {
+            position: relative;
+        }
+
+        .home-container .home-img img {
+            width: 100%;
+            margin-top: -10%;
+            transform: translate(0, 0);
+        }
+
+        @keyframes arrow-down {
+            0% {
+                transform: translateY(0);
+            }
+
+            30% {
+                transform: translateY(10px);
+            }
+        }
+
+        .section {
+            position: relative;
+            max-width: 1920px;
+            margin: auto;
+            padding: 0rem 2rem 5rem;
+            overflow: hidden;
+        }
+
+        section#skills.skills.section {
+            text-align: center;
+            background-color: var(--about-color);
+            margin-bottom: 5vh;
+            padding: 20px;
+        }
+
+        .section .about {
+            align-items: center;
+        }
+
+        .sub-section {
+            position: relative;
+            max-width: 1150px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 6rem 0;
+        }
+
+        .about .container .content {
+            column-gap: 40px;
+            width: 100%;
+        }
+
+        .about-img {
+            position: relative;
+        }
+
+        .about-img img {
+            max-width: 100%;
+            min-width: 500px;
+            margin-top: -5vh;
+        }
+
+        .about-info .description {
+            max-width: 600px;
+        }
+
+        .about-info .description h3 {
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .about-info .description h4 {
+            font-size: 1.3em;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .about-info .description h4 span {
+            color: var(--line-color);
+            font-weight: 600;
+        }
+
+        .about-info .description p {
+            color: var(--first-color);
+            font-size: 1em;
+            margin-bottom: 15px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid var(--line-color);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3.5em;
+            margin-bottom: 3vh;
+            font-weight: 900;
+            color: #1fb9b0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 30px 10%;
+            background: var(--about-color);
+            display: grid;
+            align-content: center;
+        }
+
+        .container .main-title {
+            max-width: 700px;
+            margin: 0px auto;
+            text-align: center;
+            font-family: helvetica;
+        }
+
+        .container .main-title h1 {
+            position: relative;
+            font-size: 40px;
+            color: #242223;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        .container .main-title h1::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            top: 125%;
+            left: 0;
+            background-color: #808080;
+        }
+
+        .container .main-title h1::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: #d03645;
+            top: calc(125% - 1px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .main-title p {
+            color: var(--progress-bar);
+        }
+
+        .container .row {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 70px;
+        }
+
+        .row .col {
+            flex-basis: 46%;
+        }
+
+        .row .sub-title h2 {
+            position: relative;
+            color: var(--progress-title);
+            font-size: 25px;
+            font-family: helvetica;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .row .sub-title h2::before {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 1px;
+            top: 125%;
+            left: 0;
+            background-color: #808080;
+        }
+
+        .row .sub-title h2::after {
+            content: '';
+            position: absolute;
+            width: 25%;
+            height: 3px;
+            top: calc(125% - 1px);
+            left: 0;
+            background-color: #1fb9b0;
+        }
+
+        .subject {
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--progress-bar);
+            padding-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .progress-bar {
+            position: relative;
+            width: 100%;
+            height: 5px;
+            background-color: var(--progress-bar);
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar::after {
+            position: absolute;
+            content: attr(value);
+            top: -35px;
+            right: 0;
+            color: var(--progress-bar);
+            font-size: 18px;
+        }
+
+        .progress-line {
+            position: absolute;
+            width: 0%;
+            height: 7px;
+            background-color: #1fb9b0;
+            border-radius: 15px;
+            top: -1px;
+            animation: animate 1.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
+        }
+
+        @keyframes animate {
+            100% {
+                width: 100%;
+            }
+        }
+
+        .progress-line::after {
+            content: '';
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            top: 50%;
+            left: 100%;
+            transform: translate(-50%, -50%);
+            background-color: #20c9bf;
+        }
+
+        .container.flex-center {
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        section#about.about.section {
+            background: var(--about-color);
+            height: 100vh;
+        }
+
+        section#projects.portfolio.reusable {
+            background: var(--resume-bg);
+        }
+
+        .scrollToTop-btn {
+            z-index: 1;
+            position: fixed;
+            right: 10px;
+            bottom: 20px;
+            width: 45px;
+            height: 45px;
+            background: var(--third-color);
+            color: var(--scroll-up-color);
+            font-size: .9em;
+            border-radius: 3px;
+            cursor: pointer;
+            opacity: 0;
+            transition: .5s ease;
+        }
+
+        .scrollToTop-btn.active {
+            right: 20px;
+            pointer-events: all;
+            opacity: 1;
+        }
+
+        .scrollToTop-btn:hover {
+            background: white;
+        }
+
+        .theme-btn {
+            z-index: 1;
+            position: fixed;
+            right: 0;
+            top: 100px;
+            background: var(--third-color);
+            width: 50px;
+            height: 50px;
+            font-size: 1.2em;
+            border-radius: 5px 0 0 5px;
+            cursor: pointer;
+            color: var(--scroll-up-color);
+        }
+
+        .theme-btn .fa-sun,
+        .theme-btn.sun .fa-moon {
+            display: none;
+        }
+
+        .theme-btn.sun .fa-sun {
+            display: block;
+        }
+
+
+        .dark-theme {
+            --first-color: rgb(241, 241, 241);
+            --second-color: #1fb9b0;
+            --third-color: rgb(224, 222, 222);
+            --hover-color: #1fb9b0;
+            --body-bg-color: #373535;
+            --card-bg-color: #f00;
+            --education-section-color: rgb(112, 114, 116);
+            --bar-color: #343434;
+            --bg-transparent-color: rgba(0, 0, 0, 0.1);
+            --transparent-color-01: rgba(0, 0, 0, 0.1);
+            --transparent-color-02: rgba(106, 89, 209, 0.1);
+            --line-color: #1fb9b0;
+            --title-shadow-color: rgb(226, 226, 226);
+            --button-color: rgb(146, 146, 146);
+            --color-filter: invert(0);
+            --box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+            --small-font-size: 0.9em;
+            --normal-font-size: 1em;
+            --scroll-bar-color: rgb(59, 59, 59);
+            --scroll-thumb-color: rgb(163, 163, 163);
+            --scroll-thumb-hover-color: rgb(19, 19, 19);
+            --scroll-down-color: #fff;
+            --scroll-up-color: rgb(75, 75, 75);
+            --about-color: #676767;
+            --progress-bar: #f4f7fc;
+            --progress-title: #f4f7fc;
+            --resume-bg: #373535;
+            --resume-color: #1fb9b0;
+            --resume-border: #05555c;
+            --education-color: #1fb9b0;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        @media screen and (max-width: 1070px) {
+
+            .navigation {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: var(--bg-transparent-color);
+                visibility: hidden;
+                opacity: 0;
+                transition: .3s ease;
+            }
+
+            .navigation.active {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .nav-items {
+                flex-wrap: wrap;
+                position: relative;
+                background: rgb(227 227 227);
+                width: 600px;
+                height: 85vh;
+                align-content: center;
+                max-width: 600px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                border-radius: 10px;
+                box-shadow: var(--box-shadow);
+                transform: translateY(-50px);
+                transition: .3s ease;
+                justify-content: center;
+            }
+
+            .navigation.active .nav-items {
+                transform: translateY(0);
+            }
+
+            .nav-items a {
+                margin: 15px 50px;
+            }
+
+            .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .nav-close-btn {
+                position: absolute;
+                background: url(https://raw.githubusercontent.com/llnmntbln/pics/main/close.png)no-repeat;
+                background-size: 12px;
+                background-position: center;
+                width: 40px;
+                height: 40px;
+                top: 0;
+                right: 0;
+                margin: 10px;
+                cursor: pointer;
+            }
+
+            .nav-menu-btn {
+                background: url(https://raw.githubusercontent.com/llnmntbln/pics/main/menu.png)no-repeat;
+                filter: var(--color-filter);
+                background-size: 30px;
+                background-position: center;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                display: block;
+            }
+
+
+
+            .home .home-container .info {
+                font-size: 0.85rem;
+            }
+
+            .about .container .content {
+                display: grid;
+                width: 100%;
+                row-gap: 20px;
+            }
+
+            .about-img img {
+                min-width: 0;
+                width: 100%;
+            }
+
+        }
+
+        @media screen and (max-width: 450px) {
+            div.gallery {
+                position: relative;
+                height: 2952px;
+                left: 10%;
+                width: 310px;
+            }
+        }
+
+        @media screen and (max-width: 730px) {
+
+            body {
+                margin: 5rem 0 0 0;
+            }
+
+            section#about.about.section {
+                height: 150vh;
+            }
+
+            section#home.home.flex-center {
+                margin-top: 15vh;
+            }
+
+            .section-title {
+                font-size: 3em;
+            }
+
+            .resume .resume-row {
+                flex-direction: column;
+            }
+
+            .resume-row .column-right {
+                margin-top: 30px;
+            }
+
+            section#education.resume.reusable {
+                padding: 20px;
+            }
+
+            .home .home-container {
+                display: grid;
+            }
+
+            .home-container .info h2 {
+                margin-top: 15vh;
+            }
+
+            .home-container .home-img {
+                position: absolute;
+            }
+
+            .home-container .home-img img {
+                width: 75%;
+                transform: translate(30px, -240px);
+            }
+
+            section#hobbies.hobbies.section {
+                margin-top: -4vh;
+            }
+
+            .home .home-container .info {
+                font-size: .8rem;
+            }
+
+        }
+
+
+        .portfolio .mainContainer {
+            padding: 15px;
+        }
+
+        .portfolio .section-title {
+            margin-bottom: 20px;
+        }
+
+        .portfolio .button-group {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .portfolio .button-group .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #f6f9fe;
+            color: var(--primary-clr);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .portfolio .button-group .button.active {
+            background-color: var(--line-color);
+            color: var(--scroll-up-color);
+        }
+
+        .portfolio .button-group .button:hover {
+            background-color: var(--primary-clr);
+            color: var(--bg-clr-one);
+        }
+
+        .portfolio .gallery-container {
+            max-width: 1232px;
+            margin: 0 auto;
+        }
+
+        .portfolio .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .portfolio .gallery .item {
+            flex: 0 0 calc(33.33% - 10px);
+            margin-bottom: 20px;
+            border: 4px solid transparent;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery .item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            transition: 0.3s;
+            border-radius: 25px;
+        }
+
+        .gallery .item:hover img {
+            transform: scale(1.15);
+        }
+
+        .gallery .item .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(24 111 120 / 28%);
+            color: var(--bg-clr-one);
+            padding: 15px;
+            overflow: hidden;
+            transition: opacity 0.2s ease-in-out;
+            opacity: 0;
+        }
+
+        .gallery .item:hover .overlay {
+            opacity: 1;
+        }
+
+        .item .overlay a {
+            display: inline-block;
+            padding: 8px 16px;
+            border: 2px solid var(--bg-clr-one);
+            color: var(--bg-clr-one);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .item .overlay a:hover {
+            background-color: var(--bg-clr-one);
+            color: var(--primary-clr);
+        }
+
+        .resume {
+            background-color: var(--resume-bg);
+            padding: 120px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .resume .resume-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .resume-row .column .sub-heading {
+            color: var(--resume-color);
+            padding: 0px 0px 20px 30px;
+        }
+
+        .column .resume-contents {
+            padding-left: 30px;
+            border-left: 2px solid var(--education-color);
+        }
+
+        .resume-contents .box {
+            position: relative;
+            padding: 20px;
+            margin-bottom: 1vh;
+            border-bottom: 5px solid var(--education-color);
+            border-radius: 5px;
+            background-color: #f4f7fc;
+            cursor: pointer;
+            transition: all 0.4s;
+        }
+
+        .resume-contents .box:nth-child(3) {
+            border-bottom: 0px;
+        }
+
+        .resume-contents .box::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 14px;
+            background-color: var(--education-color);
+            top: 21px;
+            left: -30px;
+        }
+
+        .resume-contents .box::after {
+            content: '';
+            position: absolute;
+            border-width: 7px;
+            border-style: solid;
+            border-color: transparent transparent transparent var(--education-color);
+            top: 21px;
+            left: -18px;
+        }
+
+        .resume-contents .box h4 {
+            position: relative;
+            color: var(--secondary-heading);
+        }
+
+        .resume-contents .box h3 {
+            font-size: 19px;
+            padding: 10px 0px 6px;
+            color: var(--primary-clr);
+            margin-top: 2px;
+        }
+
+        .resume-contents .box p {
+            margin-top: 3px;
+            line-height: 1.3;
+            color: var(--text-clr);
+            font-size: 15px;
+        }
+
+        .resume-contents .box h5 {
+            position: relative;
+            margin-top: 12px;
+            right: 0;
+            text-align: right;
+            color: var(--secondary-heading);
+            font-weight: 500;
+        }
+
+        @media(max-width: 768px) {
+            .container {
+                padding: 30px 8%;
+            }
+        }
+
+
+        footer {
+            background-color: #242424;
+        }
+
+        .footer-social-list {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            color: white;
+            justify-content: space-around;
+            margin-bottom: 28px;
+        }
+
+        .footer-social-list a {
+            width: 100%;
+            color: white;
+            height: 100px;
+            text-align: center;
+            align-items: center;
+            display: grid;
+            font-size: 4em;
+        }
+
+        .footer-social-list a:hover {
+            color: #1fb9b0;
+        }
+
+        .footer-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5% 0;
+        }
+
+        .footer-logo-img {
+            width: 85px;
+            height: 85px;
+        }
+
+        .footer-copyright {
+            color: #fff;
+        }
+
+        @media(max-width: 568px) {
+            .container .row {
+                flex-direction: column;
+            }
+
+            .container .main-title h1 {
+                font-size: 36px;
+            }
+
+            .container .row {
+                margin-top: 30px;
+            }
+
+            .row .col:nth-child(2) {
+                margin-top: 20px;
+            }
+
+            .footer-social-list a {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+
+<body style="height: 100%;">
+    <div id="preloader"></div>
+    <div class="scrollToTop-btn flex-center">
+        <i class="fas fa-arrow-up" style="margin-top: 15px;"></i>
+    </div>
+    <div class="theme-btn flex-center">
+        <i class="fas fa-moon" style="margin-top: 15px;"></i>
+        <i class="fas fa-sun" style=" margin-top: 15px;"></i>
+    </div>
+
+    <header>
+        <div class="nav-bar">
+            <a href="#LeMontablan.html" class="logo" button type="button" onClick="window.location.reload();">
+                <img src="https://raw.githubusercontent.com/llnmmntbln/Krisp.github.io/main/logoooo.png">
+            </a>
+            <div class="navigation">
+                <div class="nav-items">
+                    <div class="nav-close-btn"></div>
+                    <a href="#about">About</a>
+                    <a href="#education">Education</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                </div>
+            </div>
+            <div class="nav-menu-btn"></div>
+        </div>
+    </header>
+    <section class="home flex-center" id="home">
+        <div class="home-container">
+            <div class="info">
+                <h2>Hi, I am Allen</h2>
+                <h3>An aspiring Front-End Developer</h3>
+                <p>Thank you for dropping by my website. Let me share something about myself.</p>
+                <a href="#footer" class="btn">Contact Me <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+            <div class="home-img">
+                <img src="https://raw.githubusercontent.com/llnmmntbln/Chart/main/pic.png" alt="">
+            </div>
+
+        </div>
+    </section>
+    <section class="about section" id="about">
+        <div class="container flex-center">
+            <h2 class="section-title">About Me</h2>
+            <div class="content flex-center">
+                <div class="about-img">
+                    <img src="https://raw.githubusercontent.com/llnmmntbln/Chart/main/abouuut.png" alt="">
+                </div>
+                <div class="about-info">
+                    <div class="description">
+                        <h3>I'm Allen M. Montablan</h3>
+                        <h4>A <span>student</span> in <span>Polytechnic University of the Philippines</span> Sto.Tomas
+                            Branch</h4>
+                        <p>I'm a passionate and driven 22-year-old, currently in my fourth year of college, pursuing a
+                            degree in Information Technology. I have always been captivated by the world of technology
+                            and its transformative power to shape the future. From an early age, I found myself
+                            tinkering with gadgets and computers, and my curiosity led me to pursue this fascinating
+                            field of study.
+                            Beyond academics, I enjoy taking part in extracurricular activities that allow me to apply
+                            my IT knowledge practically. I actively engage in hackathons, and tech-related workshops,
+                            which not only enhance my skills but also enable me to collaborate with like-minded
+                            individuals who share my passion for technology.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resume reusable" id="education">
+        <h2 class="section-title">Education and Experience</h2>
+
+        <div class="resume-row">
+            <div class="column column-left">
+                <div class="sub-heading">
+                    <h2>EDUCATION</h2>
+                </div>
+                <main class="resume-contents">
+
+                    <div class="box">
+                        <h4>2018 - 2020</h4>
+                        <h3>Science, Technology, Engineering, and Mathematics Strand (STEM)</h3>
+                        <p>My educational journey in the Science, Technology, Engineering, and Mathematics (STEM) Strand
+                            has fueled my passion for innovation and problem-solving, paving the way for a future where
+                            I can make meaningful contributions to the world of science and technology.</p>
+                        <h5 class="vanue">St.Thomas Academy</h5>
+                    </div>
+
+                    <div class="box">
+                        <h4>2020 - present</h4>
+                        <h3>Bachelor of Science in Information Technology</h3>
+                        <p>I've gained a thorough grasp of software development, networking, cybersecurity, and data
+                            analysis by taking Bachelor of Science in Information Technology course. Putting me in a
+                            position to succeed in the rapidly changing digital environment.</p>
+                        <h5 class="vanue">Polytechnic University of the Philippines</h5>
+                    </div>
+
+                    <div class="box">
+                        <h4>2023 - present</h4>
+                        <h3>Google Developer Student Clubs (GDSC)</h3>
+                        <p>Participating in Google Developer Student Clubs (GDSC) has been an enriching experience,
+                            allowing me to collaborate with like-minded individuals, learn from industry experts, and
+                            explore innovative technologies, all while honing my skills as a versatile and future-ready
+                            developer</p>
+                        <h5 class="vanue">Polytechnic University of the Philippines</h5>
+                    </div>
+                </main>
+            </div>
+
+            <div class="column column-right">
+                <div class="sub-heading">
+                    <h2>EXPERIENCE</h2>
+                </div>
+                <main class="resume-contents">
+                    <div class="box">
+                        <h4>2023 - present</h4>
+                        <h3>Front-End Web Developer</h3>
+                        <p>Because of the strong foundation in user experience, graphic design, and front-end
+                            development that my web design education has given me, I am able to create enticing,
+                            user-friendly websites that make a lasting impact on viewers.</p>
+                        <h5 class="vanue">Capstone Project</h5>
+                    </div>
+
+                    <div class="box">
+                        <h4>2022- 2023</h4>
+                        <h3>Front-End Web Developer</h3>
+                        <p>I've honed my HTML, CSS, and other front-end web development skills via my
+                            studies. JavaScript and responsive design provide me the tools I need to make engaging and
+                            user-friendly interfaces that successfully combine functionality with artistry.</p>
+                        <h5 class="vanue">GDSC Hackathon</h5>
+                    </div>
+
+                    <div class="box">
+                        <h4>2022 - 2022</h4>
+                        <h3>Video Editor</h3>
+                        <p>My experience in video editing has equipped me with a diverse set of skills in various
+                            editing software, enabling me to craft compelling visual stories with seamless transitions,
+                            captivating effects, and precise attention to detail.</p>
+                        <h5 class="vanue">EPSON Corporation</h5>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="main-title">
+            <h2 class="section-title" style="margin-bottom: 0;">Skills</h2>
+            <p>I'm proud of having shown a wide range of programming and technical skills that demonstrate my
+                familiarity of languages as well as my proficiency in machine learning, natural language processing, and
+                web development.</p>
+        </div>
+
+        <div class="row">
+            <section class="col" id="skills">
+                <div class="sub-title">
+                    <h2>Programming Skills</h2>
+                </div>
+
+                <div class="skills-container">
+
+                    <div class="skill">
+                        <div class="subject">HTML</div>
+                        <div class="progress-bar" value="90%">
+                            <div class="progress-line" style="max-width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="subject">CSS</div>
+                        <div class="progress-bar" value="85%">
+                            <div class="progress-line" style="max-width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="subject">JavaScript</div>
+                        <div class="progress-bar" value="80%">
+                            <div class="progress-line" style="max-width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="subject">Responsive Design</div>
+                        <div class="progress-bar" value="90%">
+                            <div class="progress-line" style="max-width: 90%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="col">
+
+                <div class="sub-title">
+                    <h2>Technical Skills</h2>
+                </div>
+
+                <div class="skills-container">
+
+                    <div class="skill">
+                        <div class="subject">Photoshop</div>
+                        <div class="progress-bar" value="80%">
+                            <div class="progress-line" style="max-width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="subject">Canva</div>
+                        <div class="progress-bar" value="90%">
+                            <div class="progress-line" style="max-width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="subject">Microsoft Office</div>
+                        <div class="progress-bar" value="75%">
+                            <div class="progress-line" style="max-width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="subject">Video Editing</div>
+                        <div class="progress-bar" value="85%">
+                            <div class="progress-line" style="max-width: 85%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+    <section class="portfolio reusable" id="projects">
+
+        <main class="mainContainer">
+            <h2 class="section-title" style="padding: 15px;">Projects</h2>
+            <div class="button-group">
+                <button class="button active" data-filter="*">All</button>
+                <button class="button" data-filter=".website">Website</button>
+                <button class="button" data-filter=".design">Designs</button>
+                <button class="button" data-filter=".logo">Logo</button>
+                <button class="button" data-filter=".prototype">Prototype</button>
+            </div>
+
+            <div class="gallery-container">
+                <div class="gallery">
+                    <div class="item website" style="border-radius: 30px;">
+                        <img src="https://raw.githubusercontent.com/llnmmntbln/Krisp.github.io/main/3.png">
+                        <div class="overlay">
+                            <a href="http://tisconnect.free.nf/index.php" target="_blank">View More</a>
+                        </div>
+                    </div>
+                    <div class="item website" style="border-radius: 30px;">
+                        <img src="https://raw.githubusercontent.com/llnmmntbln/Krisp.github.io/main/4.png">
+                        <div class="overlay">
+                            <a href="https://llnmmntbln.github.io/Krisp/index.html" target="_blank">View More</a>
+                        </div>
+                    </div>
+                    <div class="item website" style="border-radius: 30px;">
+                        <img src="https://raw.githubusercontent.com/llnmmntbln/Krisp.github.io/main/11.png">
+                        <div class="overlay">
+                            <a href="https://llnmmntbln.github.io/Midterm/" target="_blank">View More</a>
+                        </div>
+                    </div>
+
+                    <div class="item design" style="border-radius: 30px;">
+                        <img src="https://raw.githubusercontent.com/llnmmntbln/Krisp.github.io/main/9.png">
+                        <div class="overlay">
+                            <a href="https://raw.githubusercontent.com/llnmmntbln/Krisp.github.io/main/Untitled%20design%20(5).png"
+                                target="_blank">View More</a>
+                        </div>
+                    </div>
+
+                    <div class="item design" style="border-radius: 30px;">
+                        <img src="https://raw.githubusercontent.com/llnmmntbln/Chart/main/coffee.png">
+                        <div class="overlay">
+                            <a href="https://drive.google.com/file/d/1KzrQaCLjSZs3wyGZGcEeyzEqJdbGgA5b/view?usp=sharing"
+                                target="_blank">View More</a>
+                        </div>
+                    </div>
+
+                    <div class="item design" style="border-radius: 30px;">
+                        <img src="https://raw.githubusercontent.com/llnmmntbln/Chart/main/ISKONNECT%20(3).png">
+                        <div class="overlay">
+                            <a href="https://asia-southeast-0cf9d742.fileport.io/get/DjNIeHJqGd8FMKR2SMPtvS-TLiuyfFkoq33U-QP3JEUeyJpZCI6ImhlZ3dIZFprQXhncyIsImVuY0lkIjoiMWU0MzJmMzJmMTdlMmM3ZDhlMDBlOGFlYjE2ZmZjZTgiLCJrZXkiOiJkNDZjYzExNDkxYjdhMGQ1ZTc0ZWI5ZWVkMjU1YzIxMTMxMTYwMjc2NTI1OGI3YmMyZDFkZTNlZTg5NmY1MTM2IiwibmFtZSI6IkFuZG9rcy5wZGYiLCJmcmVlIjp0cnVlLCJzaXplIjo4NTU4MDcsImluZGV4IjowLCJwcmV2aWV3IjoiYXBwbGljYXRpb24vcGRmIiwic3RhdHMiOnRydWUsImlhdCI6MTcwODIyNjYyOCwiZXhwIjoxNzA4Mzk5NDI4fQ"
+                                target="_blank">View More</a>
+                        </div>
+                    </div>
+
+                    <div class="item logo" style="border-radius: 30px;">
+                        <img src="https://raw.githubusercontent.com/llnmmntbln/Krisp.github.io/main/8.png">
+                        <div class="overlay">
+                            <a href="https://raw.githubusercontent.com/llnmmntbln/Krisp.github.io/main/Untitled%20design%20(7).png"
+                                target="_blank">View More</a>
+                        </div>
+                    </div>
+
+                    <div class="item logo" style="border-radius: 30px;">
+                        <img src="https://raw.githubusercontent.com/llnmmntbln/Chart/main/koyyyyns.png">
+                        <div class="overlay">
+                            <a href="https://raw.githubusercontent.com/llnmmntbln/Chart/main/Koyns.png"
+                                target="_blank">View More</a>
+                        </div>
+                    </div>
+
+                    <div class="item logo" style="border-radius: 30px;">
+                        <img src="https://raw.githubusercontent.com/llnmmntbln/Chart/main/convert.png">
+                        <div class="overlay">
+                            <a href="https://raw.githubusercontent.com/llnmmntbln/Chart/main/icon.png"
+                                target="_blank">View More</a>
+                        </div>
+                    </div>
+
+                    <div class="item prototype" style="border-radius: 30px;">
+                        <img src="https://raw.githubusercontent.com/llnmmntbln/Krisp.github.io/main/6.png">
+                        <div class="overlay">
+                            <a href="https://asia-southeast-0cf9d742.fileport.io/get/J-60uy4uPP9nF6TrogQHjhpWsuvV_Vj79F1IaRfUOfEeyJpZCI6Ikp3RHRieXM2ZDR0eSIsImVuY0lkIjoiN2I4YWJlZTEyYjA3Njc0OThmMTE3ZTM2Yzk2NTQ4NTQiLCJrZXkiOiIxODlkZDk3N2EyMGEzMWUyZmRiNGIzMGZmMzZmZDg3OWEwZTY2YjE4ODUxNTNkNTFiNDNmYWYzYzVhYmYyZGFhIiwibmFtZSI6IldyYXAgYW5kIENhcnJ5LnBkZiIsImZyZWUiOnRydWUsInNpemUiOjExODU2NjgsImluZGV4IjowLCJwcmV2aWV3IjoiYXBwbGljYXRpb24vcGRmIiwic3RhdHMiOnRydWUsImlhdCI6MTcwODE4NDYyNiwiZXhwIjoxNzA4MzU3NDI2fQ"
+                                target="_blank">View More</a>
+                        </div>
+                    </div>
+                    <div class="item prototype" style="border-radius: 30px;">
+                        <img src="https://raw.githubusercontent.com/llnmmntbln/Krisp.github.io/main/7.png">
+                        <div class="overlay">
+                            <a href="https://asia-southeast-0cf9d742.fileport.io/get/26FTNgcsNf9GKfAUN-BM13q1QnDXDHV-bWuC7ZtlLDUeyJpZCI6IlVZeUV4M3Y1dEhidSIsImVuY0lkIjoiYTM5ZTgzMmEyZmNhYWFhMGMwNWJmMmMyNTRhOWM4YmMiLCJrZXkiOiI2OTg3MWM3MDc1Njc1Zjc1M2VlYmJlMDQzZjkxOWU2MjQxZGIwNjVkODNhMmE1YmQ4N2ZiMzY4Yjc1YTA5N2RiIiwibmFtZSI6IktveW56LnBkZiIsImZyZWUiOnRydWUsInNpemUiOjQzMjg2MSwiaW5kZXgiOjAsInByZXZpZXciOiJhcHBsaWNhdGlvbi9wZGYiLCJzdGF0cyI6dHJ1ZSwiaWF0IjoxNzA4MTg0NTg5LCJleHAiOjE3MDgzNTczODl9"
+                                target="_blank">View More</a>
+                        </div>
+                    </div>
+                    <div class="item prototype" style="border-radius: 30px;">
+                        <img src="https://raw.githubusercontent.com/llnmmntbln/Krisp.github.io/main/5.png">
+                        <div class="overlay">
+                            <a href="https://asia-southeast-0cf9d742.fileport.io/get/z_JzaJ0jraNt4tYOsIv6ex_gCob1eh0m2rqVvHVcpZQeyJpZCI6Im5LaDlZbkJrSjlieSIsImVuY0lkIjoiNzcyZDNhMDQ3NDE5ZjYyNzY0Yzk3MTY2ZGE4NGM5ZDQiLCJrZXkiOiI4MmJkZDE2NzY1NzRiZmZmN2Y0NWNhNWE1ZmY4YzRkNWVlYTg1NWQwYTI5NWZlZTQ4OTcwZTUxNTQ1Y2ZjNzk4IiwibmFtZSI6IkFIQS5wZGYiLCJmcmVlIjp0cnVlLCJzaXplIjoxMjQwNTIzLCJpbmRleCI6MCwicHJldmlldyI6ImFwcGxpY2F0aW9uL3BkZiIsInN0YXRzIjp0cnVlLCJpYXQiOjE3MDgxODQ1MzIsImV4cCI6MTcwODM1NzMzMn0"
+                                target="_blank">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <footer>
+        <div class="row footer-row" id="footer">
+
+            <img src="https://raw.githubusercontent.com/llnmmntbln/Krisp.github.io/main/logoooo.png"
+                class="footer-logo-img">
+
+            <div class="footer-social-list">
+                <a href="https://www.facebook.com/allen.montablan.1" target="_blank"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/llnmntbln/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/llnmmntbln" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="footer-copyright">Copyright © 2023 | Allen Montablan</div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script>
+
+        const scrollTopBtn = document.querySelector(".scrollToTop-btn");
+
+        window.addEventListener("scroll", function () {
+            scrollTopBtn.classList.toggle("active", window.scrollY > 500);
+        });
+
+        scrollTopBtn.addEventListener("click", () => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+
+        const themeBtn = document.querySelector(".theme-btn");
+
+        themeBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-theme");
+            themeBtn.classList.toggle("sun");
+
+            localStorage.setItem("saved-theme", getCurrentTheme());
+            localStorage.setItem("saved-icon", getCurrentIcon());
+        });
+
+        const getCurrentTheme = () => document.body.classList.contains("dark-theme") ? "dark" : "light";
+        const getCurrentIcon = () => themeBtn.classList.contains("sun") ? "sun" : "moon";
+
+        const savedTheme = localStorage.getItem("saved-theme");
+        const savedIcon = localStorage.getItem("saved-icon");
+
+        if (savedTheme) {
+            document.body.classList[savedTheme === "dark" ? "add" : "remove"]("dark-theme");
+            themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("sun");
+        }
+
+        $(function () {
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+
+        const menuBtn = document.querySelector(".nav-menu-btn");
+        const closeBtn = document.querySelector(".nav-close-btn");
+        const navigation = document.querySelector(".navigation");
+        const navItems = document.querySelectorAll(".nav-items a");
+
+        menuBtn.addEventListener("click", () => {
+            navigation.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            navigation.classList.remove("active");
+        });
+
+        navItems.forEach((navItem) => {
+            navItem.addEventListener("click", () => {
+                navigation.classList.remove("active");
+            });
+        });
+
+        var $galleryContainer = $('.gallery').isotope({
+            itemSelector: '.item',
+            layoutMode: 'fitRows'
+        });
+
+        $('.button-group .button').on('click', function () {
+            $('.button-group .button').removeClass('active');
+            $(this).addClass('active');
+
+            var value = $(this).attr('data-filter');
+            $galleryContainer.isotope({
+                filter: value
+            });
+        });
+
+        ScrollReveal({
+            reset: false,
+            distance: '70px',
+            duration: 2500,
+            delay: 100
+        });
+
+        ScrollReveal().reveal('.home, .section-title', { delay: 400, origin: 'bottom' });
+        ScrollReveal().reveal('.home .info h3, .info h2, .home .info p, .about-info .btn, .resume-contents .box', { delay: 500, origin: 'bottom' });
+        ScrollReveal().reveal('.home .info .btn, .resume , .skills-container', { delay: 600, origin: 'bottom' });
+        ScrollReveal().reveal('.home-img, .about-img, h2, .container, .portfolio', { delay: 600, origin: 'top' });
+        ScrollReveal().reveal('.about .description', { delay: 400, origin: 'bottom' });
+        ScrollReveal().reveal('.education,', { delay: 400, origin: 'bottom', interval: 200 });
+        ScrollReveal().reveal('footer .group, .main-title p', { delay: 400, origin: 'top', interval: 200 });
+
+    </script>
+
+</body>
+
+</html>
