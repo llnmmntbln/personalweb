@@ -50,6 +50,7 @@
             --resume-color: #05555c;
             --resume-border: #1fb9b0;
             --education-color: #575757;
+            --blink-color: ##535151;
         }
 
         * {
@@ -554,6 +555,7 @@
             --resume-color: #1fb9b0;
             --resume-border: #05555c;
             --education-color: #1fb9b0;
+            --blink-color: #F7F7F7;
         }
 
         .flex-center {
@@ -1014,7 +1016,7 @@
 
 @keyframes blink-caret {
     from, to { border-color: transparent; }
-    50% { border-color: white; }
+    50% { border-color: var(--blink-color); }
 }
     </style>
 </head>
